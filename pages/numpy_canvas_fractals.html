@@ -5,6 +5,8 @@
 
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
     <style>
       .loading {
@@ -32,22 +34,24 @@
     <body>
       <b>
       </b>
-      <div style="display: flex; flex-direction: column; gap: 1em; width: 600px">
-        <div id="mandelbrot">
+      <div class="ui fluid container horizontal segments">
+        <div class="ui segment" id="mandelbrot">
           <div style="text-align: center">Mandelbrot set</div>
           <div>
             <div class="loading"></div>
             <canvas></canvas>
           </div>
         </div>
-        <div id="julia">
+        <div class="ui segment" id="julia">
           <div style="text-align: center">Julia set</div>
           <div>
             <div class="loading"></div>
             <canvas></canvas>
           </div>
         </div>
-        <div id="newton">
+        </div>
+        <div class="ui fluid container"></div>
+        <div class="ui segment" id="newton">
           <div style="text-align: center">Newton set</div>
           <fieldset style="display: flex; flex-direction: row; gap: 1em">
             <div><span style="white-space: pre">p(z) = </span><input id="poly" type="text" value="z**3 - 2*z + 2"></div>
